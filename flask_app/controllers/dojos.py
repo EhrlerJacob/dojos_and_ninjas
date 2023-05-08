@@ -8,11 +8,11 @@ def index():
 
 @app.route('/dojos')
 def dojos_dashboard():
-    return render_template("dojos_dashboard.html", dojos=dojo.get_all())
+    return render_template("dojos_dashboard.html", dojos=dojo.Dojo.get_all())
 
 @app.route('/dojos/create', methods=['POST'])
 def create():
-    Dojo.create_dojo(request.form)
+    dojo.Dojo.create_dojo(request.form)
     return redirect('/dojos')
 
 @app.route('/dojos/show/<int:id>')
@@ -20,4 +20,4 @@ def show_dojo(id):
     data ={
         'id':id
     }
-    return render_template("show_dojo.html", one_dojo=dojo.get_one_dojo(data))
+    return render_template("show_dojo.html", one_dojo=dojo.Dojo.get_one_dojo(data))

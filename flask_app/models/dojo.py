@@ -1,6 +1,6 @@
 from flask_app.config.mysqlconnection import connectToMySQL
 from flask_app.models import ninja
-dojo.ninjas.append(ninja.Ninja(ninja_data))
+# dojo.ninjas.append(ninja.Ninja(ninja_data))
 
 class Dojo:
     db = "dojos_and_ninjas_schema"
