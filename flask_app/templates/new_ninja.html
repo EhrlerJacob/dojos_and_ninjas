@@ -20,7 +20,7 @@
             <form action="/ninjas/create" method="post">
                 <div class="form-group col-md-4">
                     <label>Dojo Location:</label>
-                    <select name="dojo.name">
+                    <select name="dojos_id">
                         {% for one_dojo in all_dojos %}
                         <option value="{{one_dojo.id}}">{{one_dojo.name}}</option>
                         {% endfor %}

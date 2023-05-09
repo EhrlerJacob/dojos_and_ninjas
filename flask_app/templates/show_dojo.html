@@ -16,6 +16,26 @@
     <h1 class="text-center">
         {{one_dojo.name}} Ninjas
     </h1>
+    <table
+    class="table table-dark table-hover table-striped mx-auto"
+    style="color: peachpuff">
+        <thead class="table-dark">
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for ninja in one_dojo.ninjas %}
+            <tr>
+                <td>{{ninja.first_name}}</td>
+                <td>{{ninja.last_name}}</td>
+                <td>{{ninja.age}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
     <a href="/dojos">
         <button type="submit" class="btn btn-primary" style="margin-top: 5px;">Home</button>
     </a>

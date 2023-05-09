@@ -9,10 +9,9 @@ class Ninja:
         self.first_name = data['first_name']
         self.last_name = data['last_name']
         self.age = data['age']
-        self.dojo_id = data['dojo_id']
+        self.dojos_id = data['dojos_id']
         self.created_at = data['created_at']
         self.updated_at = data['updated_at']
-        self.dojo_id = data['dojo_id']
 
 
     @classmethod
@@ -42,7 +41,7 @@ class Ninja:
     def create_ninja(cls,data):
         query ="""
         INSERT INTO ninjas
-        (first_name, last_name, age, dojo_id) VALUES( %(dojo_id)s, %(first_name)s, %(last_name)s, %(age)s);
+        (first_name, last_name, age, dojos_id) VALUES(%(first_name)s, %(last_name)s, %(age)s, %(dojos_id)s);
         """
         return connectToMySQL(cls.db).query_db(query,data)
     
